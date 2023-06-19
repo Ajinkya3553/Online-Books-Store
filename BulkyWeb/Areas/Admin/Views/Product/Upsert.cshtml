@@ -65,6 +65,7 @@
 							<label asp-for="Product.CategoryId" class="ms-2"></label>
 							<span asp-validation-for="Product.CategoryId" class="text-danger"></span>
 						</div>
+						@*Product image must be in 2560*1600 px resolution. Height:2650px, Width:1600px*@
 						<div class="form-floating py-2 col-12">
 							<input type="file" name="file" class="form-control border-0 shadow px-3" />
 							<label asp-for="Product.ImageURL" class="ms-2"></label>
