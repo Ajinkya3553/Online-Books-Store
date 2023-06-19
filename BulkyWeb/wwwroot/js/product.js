@@ -45,7 +45,8 @@ function Delete(url) {
                 success: function (data) {
                     /*toastr.success(data.message);*/
                     dataTable.ajax.reload();
-                    toastr.success("Product deleted!");
+                    toastr.success(data.message)
+                    /*toastr.success("Product deleted!");*/
                 }
             })
         }
