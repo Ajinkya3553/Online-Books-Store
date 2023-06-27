@@ -4,6 +4,7 @@ using Bulky.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bulky.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230627075651_AddComapanyTable")]
+    partial class AddComapanyTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -93,38 +96,6 @@ namespace Bulky.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Companies");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            City = "San Francisco",
-                            Name = "Tech Solution",
-                            PhoneNumber = "9875772525",
-                            PostalCode = "94016",
-                            State = "California",
-                            StreetAddress = "123 Tech Street"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            City = "Miami",
-                            Name = "Books and Books",
-                            PhoneNumber = "7735272255",
-                            PostalCode = "33101",
-                            State = "Flo Rida",
-                            StreetAddress = "264 Aragon Ave"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            City = "Brooklyn",
-                            Name = "Greenlight",
-                            PhoneNumber = "7527279575",
-                            PostalCode = "11217",
-                            State = "New York",
-                            StreetAddress = "686 Fulton Street"
-                        });
                 });
 
             modelBuilder.Entity("Bulky.Models.Product", b =>
