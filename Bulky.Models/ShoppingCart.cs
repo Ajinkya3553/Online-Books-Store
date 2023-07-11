@@ -27,6 +27,10 @@ namespace Bulky.Models
         [ValidateNever]
         public ApplicationUser ApplicationUser { get; set; }
 
+        // 'Price' is only used for display purpose. So we use [NotMapped].
+        // [NotMapped] will not create 'Price' column in database.
+        [NotMapped]
+        public double Price { get; set; }
 
 
 
