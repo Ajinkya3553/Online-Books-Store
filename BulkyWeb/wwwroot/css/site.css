@@ -1,6 +1,9 @@
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+/*img {
+    filter: drop-shadow(10px 10px 10px black);
+}*/
 
 .divider-text:before,
 .divider-text:after {
